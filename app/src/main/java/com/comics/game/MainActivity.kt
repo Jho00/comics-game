@@ -1,15 +1,12 @@
 package com.comics.game
 
-import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
-import com.comics.game.dao.StoreFactory
+import com.comics.game.ui.BaseActivity
 import com.comics.game.ui.presenters.MainActivityPresenter
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private val presenter: MainActivityPresenter = MainActivityPresenter()
 
     private lateinit var questionTextView: TextView
@@ -59,19 +56,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun choose1(view: View) {
+    fun handleChooseVariant1(view: View) {
         presenter.chooseAnswer(1)
     }
 
-    fun choose2(view: View) {
+    fun handleChooseVariant2(view: View) {
         presenter.chooseAnswer(2)
     }
 
-    fun choose3(view: View) {
+    fun handleChooseVariant3(view: View) {
         presenter.chooseAnswer(3)
     }
 
-    fun choose4(view: View) {
+    fun handleChooseVariant4(view: View) {
         presenter.chooseAnswer(4)
     }
 }

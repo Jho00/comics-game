@@ -58,8 +58,10 @@
                             android:layout_weight=".5"
                             android:layout_height="50dp"
                             android:textAlignment="center"
-                            android:onClick="choose1"
-                            android:gravity="center_horizontal" />
+                            android:onClick="handleChooseVariant1"
+                            android:padding="2dp"
+                            android:background="@drawable/buttonbackground"
+                            android:gravity="center" />
 
                         <TextView
                             android:id="@+id/game_box__answer2"
@@ -69,8 +71,10 @@
                             android:layout_weight=".5"
                             android:layout_height="50dp"
                             android:textAlignment="center"
-                            android:onClick="choose2"
-                            android:gravity="center_horizontal" />
+                            android:onClick="handleChooseVariant2"
+                            android:padding="2dp"
+                            android:background="@drawable/buttonbackground"
+                            android:gravity="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -86,8 +90,10 @@
                             android:layout_weight=".5"
                             android:layout_height="50dp"
                             android:textAlignment="center"
-                            android:onClick="choose3"
-                            android:gravity="center_horizontal" />
+                            android:onClick="handleChooseVariant3"
+                            android:padding="2dp"
+                            android:background="@drawable/buttonbackground"
+                            android:gravity="center" />
 
                         <TextView
                             android:id="@+id/game_box__answer4"
@@ -97,8 +103,10 @@
                             android:layout_weight=".5"
                             android:layout_height="50dp"
                             android:textAlignment="center"
-                            android:onClick="choose4"
-                            android:gravity="center_horizontal" />
+                            android:onClick="handleChooseVariant4"
+                            android:padding="2dp"
+                            android:background="@drawable/buttonbackground"
+                            android:gravity="center" />
                     </LinearLayout>
                 </LinearLayout>
 

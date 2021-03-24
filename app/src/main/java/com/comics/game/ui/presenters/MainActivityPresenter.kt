@@ -1,7 +1,8 @@
 package com.comics.game.ui.presenters
 
-import android.widget.Toast
+import android.content.Intent
 import com.comics.game.MainActivity
+import com.comics.game.StartActivity
 import com.comics.game.core.Game
 import com.comics.game.entity.Answer
 
@@ -38,12 +39,9 @@ class MainActivityPresenter {
     }
 
     private fun showEndGame() {
-        if (game.isSuccess()) {
-            Toast.makeText(activity, "Win", Toast.LENGTH_LONG).show()
+        val intent = Intent(activity, StartActivity::class.java).apply {
+            putExtra(StartActivity.RESULT_MESSAGE, game.getQuestion().getText())
         }
-
-        if (game.isFail()) {
-            Toast.makeText(activity, "Lost", Toast.LENGTH_LONG).show()
-        }
+        activity.startActivity(intent)
     }
 }

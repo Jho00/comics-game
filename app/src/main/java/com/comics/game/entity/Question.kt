@@ -1,8 +1,10 @@
 package com.comics.game.entity
 
+import android.util.Log
+
 class Question(
     private val id: Int,
-    private val type: QuestionType,
+    private val type: String,
     private val question: String,
     private val answers: List<Answer>) {
 
@@ -30,10 +32,10 @@ class Question(
     }
 
     fun isSuccess(): Boolean {
-        return type == QuestionType.Success
+        return QuestionType.Success.type == type
     }
 
     fun isFail(): Boolean {
-        return type == QuestionType.Fail
+        return QuestionType.Fail.type == type
     }
 }

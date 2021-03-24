@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/result_box"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/result_box__text"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вы просрали" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="@drawable/buttonbackground"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="handleStartGame"
+        android:text="@string/start_game"
+        app:layout_constraintTop_toBottomOf="@id/result_box" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
